@@ -1,0 +1,50 @@
+---
+import { Image, getImage } from "astro:assets";
+import { BaseLayout } from "@/layouts/";
+import { BadgeWork } from "@/components/";
+import type { GetImageResult } from "astro";
+
+const image: GetImageResult = await getImage({
+  src: "https://avatars.githubusercontent.com/u/21326296?v=4",
+  inferSize: true,
+});
+---
+
+<BaseLayout title="Javier Almarza - Home">
+  <main>
+    <section class="container w-full mx-auto py-44 flex justify-center">
+      <div class="flex flex-row gap-x-4 justify-center items-center">
+        <div class="flex flex-col gap-y-4 justify-center items-center">
+          <Image
+            class="rounded-full w-40 h-40 bg-zinc-600 border-4 border-slate-300"
+            src={image.src}
+            {...image.attributes}
+            alt=""
+            inferSize={true}
+          />
+
+          <BadgeWork />
+        </div>
+
+        <div class="">
+          <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+            Hola! soy Javier Almarza
+          </h1>
+
+          <h2 class="text-2xl flex flex-col">
+            <span class="text-wrap">
+              Desarrollador de software. Desde Santiago, Chile 🇨🇱.
+            </span>
+            <span class="opacity-80 text-wrap">
+              Especializado en crear aplicaciones únicas
+            </span>
+
+            <span class="text-xl font-medium text-yellow-300 text-wrap">
+              +3 años de experiencia.
+            </span>
+          </h2>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
