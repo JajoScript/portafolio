@@ -1,7 +1,13 @@
 ---
 import { Image, getImage } from "astro:assets";
 import { BaseLayout } from "@/layouts/";
-import { BadgeWork } from "@/components/";
+import {
+  SectionContainer,
+  BadgeWork,
+  BadgeSocial,
+  TimeLine,
+} from "@/components/";
+import { LinkedInIcon, GitHubIcon, BriefcaseIcon } from "@/assets/";
 import type { GetImageResult } from "astro";
 
 const image: GetImageResult = await getImage({
@@ -10,13 +16,13 @@ const image: GetImageResult = await getImage({
 });
 ---
 
-<BaseLayout title="Javier Almarza - Home">
+<BaseLayout title="Portafolio de Javier Almarza" description="">
   <main>
-    <section class="container w-full mx-auto py-44 flex justify-center">
+    <SectionContainer id="">
       <div class="flex flex-row gap-x-4 justify-center items-center">
-        <div class="flex flex-col gap-y-4 justify-center items-center">
+        <div class="flex flex-col gap-y-2 justify-center items-center">
           <Image
-            class="rounded-full w-40 h-40 bg-zinc-600 border-4 border-slate-300"
+            class="rounded-full size-44 bg-zinc-600 border-4 border-slate-300"
             src={image.src}
             {...image.attributes}
             alt=""
@@ -39,12 +45,33 @@ const image: GetImageResult = await getImage({
               Especializado en crear aplicaciones únicas
             </span>
 
-            <span class="text-xl font-medium text-yellow-300 text-wrap">
+            <span class="text-xl font-semibold text-yellow-300 text-wrap">
               +3 años de experiencia.
             </span>
           </h2>
+
+          <nav class="flex gap-x-4 mt-8">
+            <BadgeSocial url="https://www.linkedin.com/in/javier-almarza/">
+              <LinkedInIcon class="size-6" />
+              <p class="text-sm">LinkedIn</p>
+            </BadgeSocial>
+
+            <BadgeSocial url="https://github.com/JajoScript">
+              <GitHubIcon class="size-6" />
+              <p class="text-sm">GitHub</p>
+            </BadgeSocial>
+          </nav>
         </div>
       </div>
-    </section>
+    </SectionContainer>
+
+    <SectionContainer id="EXPERIENCIE">
+      <div class="flex flex-row items-center gap-4 mb-6">
+        <BriefcaseIcon class="size-8" />
+        <h2 class="text-3xl font-semibold">Experiencia laboral</h2>
+      </div>
+
+      <TimeLine />
+    </SectionContainer>
   </main>
 </BaseLayout>
