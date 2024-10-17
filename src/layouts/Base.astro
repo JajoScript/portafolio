@@ -1,4 +1,5 @@
 ---
+import { WorkBanner } from "@/components/Home/";
 import { Header, Footer } from "@/components/";
 
 import "@fontsource/poppins/200.css";
@@ -43,6 +44,9 @@ const { title, description } = Astro.props;
       </div>
     </div>
 
+    {/* Banner */}
+    <WorkBanner />
+
     {/* Content */}
     <Header />
     <slot />
@@ -52,7 +56,9 @@ const { title, description } = Astro.props;
 
 <style is:global>
   :root {
-    color-scheme: light dark;
+    color-scheme: dark;
+    --color-point: #5175db;
+    --color-border: #2b54c9;
   }
   html {
     scroll-behavior: smooth;

@@ -1,5 +1,4 @@
 ---
-import { Image, getImage } from "astro:assets";
 import { BaseLayout } from "@/layouts/";
 import {
   SectionContainer,
@@ -8,12 +7,7 @@ import {
   TimeLine,
 } from "@/components/";
 import { LinkedInIcon, GitHubIcon, BriefcaseIcon } from "@/assets/";
-import type { GetImageResult } from "astro";
-
-const image: GetImageResult = await getImage({
-  src: "https://avatars.githubusercontent.com/u/21326296?v=4",
-  inferSize: true,
-});
+import photoProfile from "@/../public/photo_profile.webp";
 ---
 
 <BaseLayout
@@ -35,17 +29,15 @@ const image: GetImageResult = await getImage({
           mb-8
         `}
         >
-          <Image
+          <img
             class={`
             size-52
             md:size-44
             mb-2
             border-4 border-slate-300 rounded-full shadow border-opacity-50
             `}
-            src={image.src}
-            {...image.attributes}
+            src={photoProfile.src}
             alt=""
-            inferSize={true}
           />
 
           <BadgeWork />
