@@ -73,15 +73,18 @@ export const prerender = true;
       leading-none
     `}
   >
-    <p class="">
-      {company}
+    <div class="flex flex-row gap-x-2 items-center flex-wrap">
+      <p class="text-sm font-semibold md:text-md text-wrap capitalize">
+        {company}
+      </p>
 
-      <span class="flex flex-row">
-        <p class="text-xs md:text-md text-wrap capitalize">
-          ({parsedDate(start_date)} - {parsedDate(end_date)}) {seniority}
-        </p>
-      </span>
-    </p>
+      <div class="flex flex-row gap-x-2">
+        <time class="text-xs"
+          >({parsedDate(start_date)} - {parsedDate(end_date)})</time
+        >
+        <p class="text-xs md:text-md text-wrap capitalize">{seniority}</p>
+      </div>
+    </div>
 
     <div
       class="prose prose-invert leading-normal text-justify text-xs md:text-base mt-2 mb-4 font-normal text-gray-500 dark:text-gray-400 cursor-pointer"
