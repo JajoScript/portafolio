@@ -5,10 +5,12 @@ import Experience from "./Experience.astro";
 const experiences = await getCollection("experiencies");
 ---
 
-<ol class="relative border-s-2 border-blue-700 border-opacity-30">
-  {
-    experiences.map((experience) => {
-      return <Experience {...experience} />;
-    })
-  }
-</ol>
+<div class="mx-2 md:mx-auto">
+  <ol class="">
+    {
+      experiences.map((experience) => {
+        return <Experience {...experience} />;
+      })
+    }
+  </ol>
+</div>

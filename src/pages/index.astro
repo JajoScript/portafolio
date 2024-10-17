@@ -16,13 +16,32 @@ const image: GetImageResult = await getImage({
 });
 ---
 
-<BaseLayout title="Portafolio de Javier Almarza" description="">
+<BaseLayout
+  title="Portafolio de Javier Almarza"
+  description="Javier Almarza, Desarrollador FullStack con tres años de experiencia desarrollando software de calidad."
+>
   <main>
     <SectionContainer id="">
-      <div class="flex flex-row gap-x-4 justify-center items-center">
-        <div class="flex flex-col gap-y-2 justify-center items-center">
+      <div
+        class={`
+        px-8 py-4
+        flex flex-col lg:flex-row md:gap-x-4 justify-center items-center
+      `}
+      >
+        {/* Foto de perfil y #OpenToWork*/}
+        <div
+          class={`
+          flex flex-col gap-y-2 justify-center items-center
+          mb-8
+        `}
+        >
           <Image
-            class="rounded-full size-44 bg-zinc-600 border-4 border-slate-300"
+            class={`
+            size-52
+            md:size-44
+            mb-2
+            border-4 border-slate-300 rounded-full shadow border-opacity-50
+            `}
             src={image.src}
             {...image.attributes}
             alt=""
@@ -32,25 +51,55 @@ const image: GetImageResult = await getImage({
           <BadgeWork />
         </div>
 
-        <div class="">
-          <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        {/* Título principal y desc */}
+        <div
+          class={`
+          flex flex-col items-center md:items-start
+        `}
+        >
+          <h1
+            class={`
+              text-white text-3xl text-center md:text-5xl font-bold
+              flex flex-row justify-center md:items-start
+              gap-x-4 pb-4
+            `}
+          >
             Hola! soy Javier Almarza
           </h1>
 
-          <h2 class="text-2xl flex flex-col">
-            <span class="text-wrap">
-              Desarrollador de software. Desde Santiago, Chile 🇨🇱.
+          <h2
+            class={`
+              flex flex-col items-center md:items-start
+              gap-y-4 md:gap-y-0
+              text-2xl md:text-4xl
+            `}
+          >
+            <span
+              class={`
+                text-lg md:text-xl text-wrap text-center
+              `}
+            >
+              Desarrollador de software. Desde Santiago, Chile 🇨🇱
             </span>
-            <span class="opacity-80 text-wrap">
+            <span
+              class={`
+              text-lg md:text-xl text-wrap text-center
+              opacity-80
+            `}
+            >
               Especializado en crear aplicaciones únicas
             </span>
 
-            <span class="text-xl font-semibold text-yellow-300 text-wrap">
+            <span
+              class={`
+                text-base md:text-xl font-semibold text-yellow-300 text-wrap text-center
+              `}
+            >
               +3 años de experiencia.
             </span>
           </h2>
 
-          <nav class="flex gap-x-4 mt-8">
+          <nav class="flex justify-center md:justify-start gap-x-4 mt-8">
             <BadgeSocial url="https://www.linkedin.com/in/javier-almarza/">
               <LinkedInIcon class="size-6" />
               <p class="text-sm">LinkedIn</p>
@@ -66,9 +115,15 @@ const image: GetImageResult = await getImage({
     </SectionContainer>
 
     <SectionContainer id="EXPERIENCIE">
-      <div class="flex flex-row items-center gap-4 mb-6">
-        <BriefcaseIcon class="size-8" />
-        <h2 class="text-3xl font-semibold">Experiencia laboral</h2>
+      <div class="flex flex-row items-center gap-4 mb-4">
+        <BriefcaseIcon class="size-4 md:size-6" />
+        <h2
+          class={`
+            text-2xl md:text-3xl font-semibold
+          `}
+        >
+          Experiencia laboral
+        </h2>
       </div>
 
       <TimeLine />

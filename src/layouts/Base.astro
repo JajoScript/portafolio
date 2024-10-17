@@ -1,5 +1,5 @@
 ---
-import { Header } from "@/components/";
+import { Header, Footer } from "@/components/";
 
 import "@fontsource/poppins/200.css";
 import "@fontsource/poppins/400.css";
@@ -18,18 +18,27 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-900 h-screen">
+  <body class="h-screen bg-slate-900">
     {/* Background */}
     <div
-      class="absolute inset-0 -z-10 h-full w-full bg-slate-900 bg-[linear-gradient(to_right,#141e36_1px,transparent_1px),linear-gradient(to_bottom,#141e36_1px,transparent_1px)] bg-[size:6rem_4rem]"
+      class={`
+        h-full w-full
+        absolute inset-0 -z-10
+        bg-slate-900
+        bg-[linear-gradient(to_right,#141e36_1px,transparent_1px),linear-gradient(to_bottom,#141e36_1px,transparent_1px)]
+        bg-[size:2rem_4rem] lg:bg-[size:6rem_4rem]
+      `}
     >
       <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#111f40,transparent)]"
+        class={`
+          absolute bottom-0 left-0 right-0 top-0
+          bg-[radial-gradient(circle_300px_at_25%_100px,#111f40,transparent)] md:bg-[radial-gradient(circle_500px_at_50%_200px,#111f40,transparent)]
+        `}
       >
       </div>
     </div>
@@ -37,6 +46,7 @@ const { title, description } = Astro.props;
     {/* Content */}
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 
