@@ -9,14 +9,12 @@ const experiencies: CollectionConfig<any> = defineCollection({
 
     start_date: z.string(),
     end_date: z.string(),
+    seniority: z.string(),
 
     modality: z.string(),
     location: z.string(),
     country: z.string(),
   })
 });
-
-
-
 
 export const collections = { experiencies };

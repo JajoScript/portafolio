@@ -5,6 +5,7 @@ interface Experience {
 
   start_date: string;
   end_date: string;
+  seniority: string;
 
   modality: string;
   location: string;
