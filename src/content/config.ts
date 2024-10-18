@@ -17,4 +17,19 @@ const experiencies: CollectionConfig<any> = defineCollection({
   })
 });
 
-export const collections = { experiencies };
+const projects: CollectionConfig<any> = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    links: z.object({
+      github: z.string(),
+      deploy: z.string()
+    }),
+
+    image: z.string(),
+    tags: z.array(z.string()),
+    isPublic: z.boolean(),
+  })
+})
+
+export const collections = { experiencies, projects };
