@@ -1,11 +1,6 @@
 ---
 import { BaseLayout } from "@/layouts/";
-import {
-  SectionContainer,
-  BadgeWork,
-  BadgeSocial,
-  TimeLine,
-} from "@/components/";
+import { Section, BadgeWork, BadgeSocial, TimeLine } from "@/components/";
 import { LinkedInIcon, GitHubIcon, BriefcaseIcon } from "@/assets/";
 import photoProfile from "@/../public/photo_profile.webp";
 ---
@@ -15,7 +10,7 @@ import photoProfile from "@/../public/photo_profile.webp";
   description="Javier Almarza, Desarrollador FullStack con tres años de experiencia desarrollando software de calidad."
 >
   <main>
-    <SectionContainer id="">
+    <Section id="">
       <div
         class={`
         px-8 py-4
@@ -104,9 +99,9 @@ import photoProfile from "@/../public/photo_profile.webp";
           </nav>
         </div>
       </div>
-    </SectionContainer>
+    </Section>
 
-    <SectionContainer id="EXPERIENCIE">
+    <Section id="EXPERIENCIE">
       <div class="flex flex-row items-center gap-4 mb-4">
         <BriefcaseIcon class="size-4 md:size-6 text-white" />
         <h2
@@ -119,6 +114,6 @@ import photoProfile from "@/../public/photo_profile.webp";
       </div>
 
       <TimeLine />
-    </SectionContainer>
+    </Section>
   </main>
 </BaseLayout>
