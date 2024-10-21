@@ -1,9 +1,9 @@
 ---
 title: "Waton Discord Bot"
-description: "Bot multifuncional para Discord desarrollado en JavaScript."
+description: "Bot multifuncional para Discord desarrollado en JavaScript. Diseñado para mejorar la experiencia de los usuarios en servidores de Discord, WatonBot ofrece una amplia gama de funcionalidades que van desde la moderación hasta el entretenimiento."
 links:
-  github: "#"
-  deploy: "#"
+  github: "https://github.com/JajoScript/Waton-BOT"
+  deploy: ""
 image: "projects\\Empty.webp"
 tags: ["Node.js", "JavaScript", "Discord.js", "Discord Bot"]
 isPublic: true

@@ -1,9 +1,9 @@
 ---
 title: "Adminify"
-description: "Aplicación de escritorio para la gestión de caja en tiendas"
+description: "Adminify es una aplicación de escritorio diseñada para gestionar el flujo de caja en tiendas. Desarrollada utilizando React y JavaScript, y empaquetada con Tauri, Adminify ofrece una solución eficiente y fácil de usar para la administración de ventas y transacciones en puntos de venta."
 links:
   github: "https://github.com/AdminifyCL/Adminify"
-  deploy: "#"
+  deploy: ""
 image: "projects\\Adminify.webp"
 tags: ["React", "JavaScript", "Tauri", "Desktop Application"]
 isPublic: true

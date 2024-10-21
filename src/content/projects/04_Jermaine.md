@@ -1,9 +1,9 @@
 ---
 title: "Jermaine"
-description: "Videojuego desarrollado utilizando el motor de Godot y su lenguaje GDScript"
+description: "Un emocionante videojuego de plataformas desarrollado con el motor de juego Godot y su lenguaje de scripting GDScript. En este juego, los jugadores asumen el papel de Jermaine, un intrépido aventurero que debe superar una serie de desafiantes niveles llenos de obstáculos, enemigos y secretos por descubrir."
 links:
   github: "https://github.com/JajoScript/Jermaine"
-  deploy: "#"
+  deploy: ""
 image: "projects\\Empty.webp"
 tags: ["Godot", "GDScript", "Plataformas"]
 isPublic: true
