@@ -6,7 +6,9 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="flex flex-row items-center gap-4 mb-4">
+<div
+  class="flex flex-row items-center gap-4 mb-4 border-b-2 border-blue-900/80"
+>
   <slot />
 
   <h2
