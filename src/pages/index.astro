@@ -1,7 +1,14 @@
 ---
 import { BaseLayout } from "@/layouts/";
-import { Section, BadgeWork, BadgeSocial, TimeLine } from "@/components/";
-import { LinkedInIcon, GitHubIcon, BriefcaseIcon } from "@/assets/";
+import {
+  Section,
+  BadgeWork,
+  BadgeSocial,
+  TimeLine,
+  Projects,
+  Title,
+} from "@/components/";
+import { LinkedInIcon, GitHubIcon, BriefcaseIcon, CodeIcon } from "@/assets/";
 import photoProfile from "@/../public/photo_profile.webp";
 ---
 
@@ -32,7 +39,7 @@ import photoProfile from "@/../public/photo_profile.webp";
             border-4 border-slate-300 rounded-full shadow border-opacity-50
             `}
             src={photoProfile.src}
-            alt=""
+            alt="Imagen de perfil de JajoScript"
           />
 
           <BadgeWork />
@@ -101,19 +108,20 @@ import photoProfile from "@/../public/photo_profile.webp";
       </div>
     </Section>
 
-    <Section id="EXPERIENCIE">
-      <div class="flex flex-row items-center gap-4 mb-4">
+    <Section id="EXPERIENCE">
+      <Title title="Experiencia laboral">
         <BriefcaseIcon class="size-4 md:size-6 text-white" />
-        <h2
-          class={`
-            text-2xl md:text-3xl font-semibold text-white
-          `}
-        >
-          Experiencia laboral
-        </h2>
-      </div>
+      </Title>
 
       <TimeLine />
+    </Section>
+
+    <Section id="PROJECTS">
+      <Title title="Proyectos">
+        <CodeIcon class="size-6 md:size-8 text-white stroke-white" />
+      </Title>
+
+      <Projects />
     </Section>
   </main>
 </BaseLayout>

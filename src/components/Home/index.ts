@@ -5,3 +5,6 @@ import WorkBanner from './WorkBanner.astro'
 export {
   WorkBanner
 }
+
+export * from './JobExperience'
+export * from './Projects'
