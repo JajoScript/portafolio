@@ -4,8 +4,8 @@ description: "Aplicación móvil para la captura y registro de entornos verdes y
 links:
   github: "#"
   deploy: "#"
-image: "#"
-tags: ["TypeScript", "JavaScript", "Android", "iOS"]
+image: "projects\\Empty.webp"
+tags: ["TypeScript", "JavaScript", "React", "React-Native", "Android", "iOS"]
 isPublic: false
 ---
 
